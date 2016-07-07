@@ -1,0 +1,23 @@
+name: (PluginName)
+version: 1.0.0
+api: 2.0.0
+auther: (Auther)
+description: (Description)
+main: (Auther)/(PluginName)
+commands:
+  test:
+    description: "TestCommand"
+    usage: "/test"
+    permission: "test.command.test"
+permissions:
+  test:
+    default: op
+    description: "Allows using all the (PluginName) things"
+    children:
+     test.command:
+      default: op
+      description: "Allows using all the (PluginName) commands"
+      children:
+       test.command.test:
+        default: op
+        description: "Allows using the test command"
